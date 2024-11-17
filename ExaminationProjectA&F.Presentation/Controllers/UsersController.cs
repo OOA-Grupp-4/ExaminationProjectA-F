@@ -16,7 +16,7 @@ namespace ExaminationProjectA_F.Presentation.Controllers
         public async Task<IActionResult> Create(UserRegistrationForm form)
         {
             if (!ModelState.IsValid)
-                return BadRequest(400);
+                return BadRequest();
 
             var result = await _userService.CreateUserAsync(form);
             if (result != null)
